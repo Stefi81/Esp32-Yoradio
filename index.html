@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ESP32 Rádió Telepítő</title>
+    <script 
+        type="module" 
+        src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module">
+    </script>
+    <style>
+        /* Egy kis csinosítás */
+        body { 
+            font-family: Arial, sans-serif; 
+            display: grid;
+            place-items: center;
+            min-height: 80vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #fff;
+            padding: 2rem 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 { color: #333; }
+        p { color: #666; margin-bottom: 2rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ESP32 Internet Rádió Telepítő</h1>
+        <p>Csatlakoztasd az ESP32-det a számítógéphez USB-n keresztül,
+            <br>majd kattints a "TELEPÍTÉS" gombra!
+        </p>
+
+        <esp-web-install-button manifest="./manifest.json">
+        </esp-web-install-button>
+
+        <p style="margin-top: 2rem; font-size: 0.8rem; color: #aaa;">
+            (Chrome vagy Edge böngésző szükséges.)
+        </p>
+    </div>
+</body>
+</html>
